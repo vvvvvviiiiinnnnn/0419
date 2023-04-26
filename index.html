@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>02</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+		/>
+		<!-- Link Swiper's CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
+		<!-- Demo styles -->
+		<style>
+			*,
+			*::before,
+			*::after {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				height: 100%;
+			}
+			body {
+				font-family: 'Poppins', sans-serif;
+				display: grid;
+				place-items: center;
+				background-color: #01d9ff;
+			}
+			/* Demo styles end */
+			.swiper {
+				width: 700px;
+			}
+			.swiper-slide {
+				position: relative;
+				background-color: #000;
+			}
+			.swiper-slide img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.swiper button {
+				width: 50px;
+				height: 50px;
+				color: #fff;
+				background: transparent;
+				border: none;
+				outline: none;
+				transition: opacity 0.25s;
+			}
+			.swiper button:hover {
+				opacity: 0.8;
+			}
+			.swiper button::before,
+			.swiper button::after {
+				font-size: 24px;
+			}
+			.swiper-pagination-bullet {
+				background-color: #fff;
+			}
+
+			.swiper-description {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				isolation: isolate;
+				padding: 50px 25px 25px;
+				color: #fff;
+			}
+			.swiper-description::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8) 50%);
+			}
+			.swiper-description h2 {
+				font-size: 42px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+			}
+			.swiper-description p {
+				font-size: 14px;
+				max-width: 50%;
+				margin-bottom: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Swiper -->
+		<div class="swiper carousel">
+			<div class="swiper-wrapper">
+				<figure class="swiper-slide">
+					<img src="342733427_579421580668466_7340725820633629895_n (1).jpg" alt="" />
+					<figcaption class="swiper-description">
+						<h2>教科2A 410730674 陳秉陞</h2>
+						<p>
+							以下是所學的課程做的作品
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="swiper-slide">
+					<img src="元.gif" alt="" />
+					<figcaption class="swiper-description">
+						<h2>一上 程式設計</h2>
+						<p>
+							滑鼠點按後畫面改變圓臉碰到邊界會反彈
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="swiper-slide">
+					<img src="一.JPG" alt="" />
+					<img src="二.JPG" alt="" />
+					<img src="三.JPG" alt="" />
+					<figcaption class="swiper-description">
+						<h2>一下 程式設計</h2>
+						<p>
+							按數字鍵會改變畫面有不同效果呈現
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="swiper-slide">
+					<img src="一部.JPG" alt="" />
+					<figcaption class="swiper-description">
+						<h2>二上 3D動畫</h2>
+						<p>Meshmixer用軟體進行雕塑
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="swiper-slide">
+					<img src="" alt="" />
+					<img src="阿爾.gif" alt="" />
+					<figcaption class="swiper-description">
+						<h2>二上 3D動畫</h2>
+						<p>
+							將兩個物件合併後做成動畫
+						</p>
+					</figcaption>
+				</figure>
+			</div>
+			<button type="button" class="swiper-button-next"></button>
+			<button type="button" class="swiper-button-prev"></button>
+			<div class="swiper-pagination"></div>
+		</div>
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+			const swiper = new Swiper('.carousel', {
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				},
+				pagination: {
+					el: '.swiper-pagination'
+				}
+			})
+		</script>
+	</body>
+</html>
